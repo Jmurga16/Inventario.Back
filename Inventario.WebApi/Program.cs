@@ -1,12 +1,12 @@
 using IoC;
-//using WebExceptionPresenter;
+using WebExceptionPresenter;
 
 var builder = WebApplication.CreateBuilder(args);
 
 ConfigurationManager configuration = builder.Configuration;
 // Agregar servicios al contenedor
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(Filters.Register);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -29,7 +29,7 @@ app.UseRouting();
 
 app.UseCors(options =>
 {
-    options.WithOrigins("http://localhost:4200", "http://localhost:4500");
+    options.WithOrigins("http://localhost:4200", "https://inventory-canvia.azurewebsites.net");
     options.AllowAnyMethod();
     options.AllowAnyHeader();
 });
