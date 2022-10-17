@@ -7,12 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Inventario.ADONet\Inventario.ADONet.csproj" />
     <ProjectReference Include="..\Inventario.UseCasesPorts\Inventario.UseCasesPorts.csproj" />
+    <ProjectReference Include="..\Inventario.UseCases\Inventario.UseCases.csproj" />
+    <ProjectReference Include="..\Presenters\Presenters.csproj" />
   </ItemGroup>
 
 </Project>

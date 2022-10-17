@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Enums\" />
+    <ProjectReference Include="..\Inventario.Entities\Inventario.Entities.csproj" />
+    <ProjectReference Include="..\Inventario.UseCasesDTOs\Inventario.UseCasesDTOs.csproj" />
   </ItemGroup>
 
 </Project>
