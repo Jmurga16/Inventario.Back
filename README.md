@@ -6,5 +6,4 @@ Modelo de Base de Datos:
 
 Arquitectura Usada (Clean Code):
 
-![image](https://user-images.githubusercontent.com/58633633/196407231-46631045-29e1-4774-b36f-f48ee873bdba.png)
-
+![image](https://user-images.githubusercontent.com/58633633/196407286-e2bb0849-753c-41e8-bf3b-4f7615181395.png)
