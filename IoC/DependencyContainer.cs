@@ -1,11 +1,14 @@
 ﻿using Inventario.ADONet;
 using Inventario.UseCases.Menu.ListMenu;
+using Inventario.UseCases.Users.FormUser;
 using Inventario.UseCases.Users.ListUser;
 using Inventario.UseCasesPorts.Menu.ListMenu;
+using Inventario.UseCasesPorts.User.FormUser;
 using Inventario.UseCasesPorts.User.ListUser;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Presenters.Menu.ListMenu;
+using Presenters.User.FormUser;
 using Presenters.User.ListUser;
 using System;
 using System.Collections.Generic;
@@ -28,6 +31,9 @@ namespace IoC
 
             services.AddScoped<IListUserInputPort, ListUserInteractor>();
             services.AddScoped<IListUserOutputPort, ListUserPresenter>();
+
+            services.AddScoped<IFormUserInputPort, FormUserInteractor>();
+            services.AddScoped<IFormUserOutputPort, FormUserPresenter>();
 
             //services.AddScoped<IListUserSummaryByDateInputPort, ListUserSummaryByDateInteractor>();
 

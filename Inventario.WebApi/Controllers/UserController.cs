@@ -1,6 +1,9 @@
-﻿using Inventario.UseCasesDTOs.User.ListUser;
+﻿using Inventario.UseCasesDTOs.General;
+using Inventario.UseCasesDTOs.User.ListUser;
+using Inventario.UseCasesPorts.User.FormUser;
 using Inventario.UseCasesPorts.User.ListUser;
 using Microsoft.AspNetCore.Mvc;
+using Presenters.User.FormUser;
 using Presenters.User.ListUser;
 
 namespace Inventario.WebApi.Controllers
@@ -12,9 +15,14 @@ namespace Inventario.WebApi.Controllers
         readonly IListUserInputPort ListUserInputPort;
         readonly IListUserOutputPort ListUserOutputPort;
 
+        readonly IFormUserInputPort FormUserInputPort;
+        readonly IFormUserOutputPort FormUserOutputPort;
 
-        public UserController(IListUserInputPort listUserInputPort, IListUserOutputPort listUserOutputPort) =>
-        (ListUserInputPort, ListUserOutputPort) = (listUserInputPort, listUserOutputPort);
+        public UserController
+            (IListUserInputPort listUserInputPort, IListUserOutputPort listUserOutputPort,
+            IFormUserInputPort formUserInputPort, IFormUserOutputPort formUserOutputPort) =>
+            (ListUserInputPort, ListUserOutputPort, FormUserInputPort, FormUserOutputPort) =
+            (listUserInputPort, listUserOutputPort, formUserInputPort, formUserOutputPort);
 
 
         [HttpGet]
@@ -38,6 +46,18 @@ namespace Inventario.WebApi.Controllers
 
             return Presenter.ContentById;
         }
+
+        [HttpPost]
+        public async Task<GeneralResponse> PostUser(GeneralRequest request)
+        {
+
+            await FormUserInputPort.PostUser(request);
+
+            var Presenter = FormUserOutputPort as FormUserPresenter;
+
+            return Presenter.Content;
+        }
+
 
     }
 }
