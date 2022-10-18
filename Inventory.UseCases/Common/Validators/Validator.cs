@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Inventario.UseCases.Common.Validators
 {
+    //Clase de Validaciones Generales
     public static class Validator<Model>
     {
         public static Task<List<ValidationFailure>> Validate(Model model, IEnumerable<IValidator<Model>> validators, bool causesException = true)

@@ -66,6 +66,7 @@ namespace Inventario.UseCases.Users.ListUser
             await OutputPort.Handle(response);
         }
 
+        //Obtener Lista de Usuarios por Id
         public async Task GetUserById(int nOpcion, int nIdUsuario)
         {
 
@@ -76,7 +77,7 @@ namespace Inventario.UseCases.Users.ListUser
 
                 List<ListUserByIdResponse> listaUsers = new List<ListUserByIdResponse>();
 
-                //Opcion 1 : Listar Todo
+                //Opcion 2 : Listar por Identificador
               
                 using (IDataReader dr = conexion.ejecutarDataReader("USP_GET_Usuarios", nOpcion, nIdUsuario))
                 {
@@ -113,5 +114,6 @@ namespace Inventario.UseCases.Users.ListUser
 
             await OutputPort.Handle(response);
         }
+
     }
 }
