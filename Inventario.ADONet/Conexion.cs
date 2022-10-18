@@ -14,12 +14,12 @@ namespace Inventario.ADONet
 
         #region Variables
         private readonly String oSqlConnIN;
-        private readonly SqlTransaction sqlTransaction = null;
+        private readonly SqlTransaction? sqlTransaction;
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
         #endregion
 
 
-        #region Conexion
+        #region Conexion a la Base de Datos
         public Conexion()
         {
             try
@@ -68,7 +68,9 @@ namespace Inventario.ADONet
             DataSet ds = ObtenerParametros(sProcedure);
 
             if (ds.Tables.Count == 0)
+            {
                 return null;
+            }
             else if (ds.Tables.Count > 0)
             {
                 DataTable dt = ds.Tables[0]; //Estructura del Stored           
@@ -91,23 +93,11 @@ namespace Inventario.ADONet
             String sValor;
             if (sqlTransaction != null)
             {
-                sValor = SqlHelper.ExecuteScalar
-                    (
-                    sqlTransaction,
-                    CommandType.StoredProcedure,
-                    sProcedure,
-                    arParms
-                    ).ToString();
+                sValor = SqlHelper.ExecuteScalar(sqlTransaction, CommandType.StoredProcedure, sProcedure, arParms).ToString();
             }
             else
             {
-                sValor = SqlHelper.ExecuteScalar
-                    (
-                    this.oSqlConnIN,
-                    CommandType.StoredProcedure,
-                    sProcedure,
-                    arParms
-                    ).ToString();
+                sValor = SqlHelper.ExecuteScalar(this.oSqlConnIN, CommandType.StoredProcedure, sProcedure, arParms).ToString();
             }
             return sValor;
         }

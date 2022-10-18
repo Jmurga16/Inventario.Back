@@ -14,7 +14,7 @@ namespace Inventario.UseCases.Menu.ListMenu
     public class ListMenuInteractor : IListMenuInputPort
     {
 
-        readonly Conexion? oCon;
+        readonly Conexion oCon;
         readonly IListMenuOutputPort OutputPort;
 
         public ListMenuInteractor(Conexion oCon, IListMenuOutputPort outputPort)
@@ -23,6 +23,7 @@ namespace Inventario.UseCases.Menu.ListMenu
             OutputPort = outputPort;
         }
 
+        //Obtener Lista de Menú
         public async Task GetMenus()
         {
 
@@ -40,13 +41,13 @@ namespace Inventario.UseCases.Menu.ListMenu
                     {
                         ListMenuResponse entity = new ListMenuResponse();
 
-                        entity.IdMenu = int.Parse(Convert.ToString(dr["IdMenu"]));
+                        entity.IdMenu = Convert.ToInt32((dr["IdMenu"]));
                         entity.Name = Convert.ToString(dr["Name"]);
                         entity.Route = Convert.ToString(dr["Route"]);
                         entity.Icon = Convert.ToString(dr["Icon"]);
-                        entity.IdParent = Int32.Parse(Convert.ToString(dr["IdParent"]));
-                        entity.Level = Int32.Parse(Convert.ToString(dr["Level"]));
-                        entity.Status = Boolean.Parse(Convert.ToString(dr["Status"]));
+                        entity.IdParent = Convert.ToInt32(dr["IdParent"]);
+                        entity.Level = Convert.ToInt32(dr["Level"]);
+                        entity.Status = Convert.ToBoolean(dr["Status"]);
 
 
                         listaMenus.Add(entity);

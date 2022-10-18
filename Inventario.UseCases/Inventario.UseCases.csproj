@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Inventario.UseCasesPorts\Inventario.UseCasesPorts.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Users\FormUser\" />
+  </ItemGroup>
+
 </Project>

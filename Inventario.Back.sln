@@ -11,27 +11,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Interface Adapters", "3.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Frameworks And Drivers", "4. Frameworks And Drivers", "{D1756F38-E61F-4611-83BE-53090C1307A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.UseCases", "Inventario.UseCases\Inventario.UseCases.csproj", "{4843246A-3FE6-458E-821F-8990A4E04E60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventario.UseCases", "Inventario.UseCases\Inventario.UseCases.csproj", "{4843246A-3FE6-458E-821F-8990A4E04E60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.UseCasesDTOs", "Inventario.UseCasesDTOs\Inventario.UseCasesDTOs.csproj", "{28910FC6-D777-448C-BB91-4AAA1928C9C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventario.UseCasesDTOs", "Inventario.UseCasesDTOs\Inventario.UseCasesDTOs.csproj", "{28910FC6-D777-448C-BB91-4AAA1928C9C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.Entities", "Inventario.Entities\Inventario.Entities.csproj", "{F2BD0A20-7212-48C4-88CF-AA5B91F76662}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventario.Entities", "Inventario.Entities\Inventario.Entities.csproj", "{F2BD0A20-7212-48C4-88CF-AA5B91F76662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.WebApi", "Inventario.WebApi\Inventario.WebApi.csproj", "{E4144A0A-A136-4B96-B257-5D9493692D39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventario.WebApi", "Inventario.WebApi\Inventario.WebApi.csproj", "{E4144A0A-A136-4B96-B257-5D9493692D39}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{6C6EFDD2-19B1-4033-AAE5-CE59051C10BD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presenters", "Presenters", "{510FA76E-8978-4AE3-A8E1-BBAF71A32DDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.UseCasesPorts", "Inventario.UseCasesPorts\Inventario.UseCasesPorts.csproj", "{CFEC6800-6CA6-4BDF-891E-3079FE2EF2DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventario.UseCasesPorts", "Inventario.UseCasesPorts\Inventario.UseCasesPorts.csproj", "{CFEC6800-6CA6-4BDF-891E-3079FE2EF2DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoC", "IoC\IoC.csproj", "{3162658D-FB9B-4EB7-96C7-C3A43D121147}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoC", "IoC\IoC.csproj", "{3162658D-FB9B-4EB7-96C7-C3A43D121147}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presenters", "Presenters\Presenters.csproj", "{1AC17B0D-6AC9-4739-A089-6B96A4FD9106}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presenters", "Presenters\Presenters.csproj", "{1AC17B0D-6AC9-4739-A089-6B96A4FD9106}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebExceptionPresenter", "WebExceptionPresenter\WebExceptionPresenter.csproj", "{1C612152-BD0A-4F49-B8E7-5A10610919CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebExceptionPresenter", "WebExceptionPresenter\WebExceptionPresenter.csproj", "{1C612152-BD0A-4F49-B8E7-5A10610919CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.ADONet", "Inventario.ADONet\Inventario.ADONet.csproj", "{37C503C9-C5C3-4457-B555-8A8C0761D855}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventario.ADONet", "Inventario.ADONet\Inventario.ADONet.csproj", "{37C503C9-C5C3-4457-B555-8A8C0761D855}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8107BDA3-2320-4F71-BB02-BC6A7C09203C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
