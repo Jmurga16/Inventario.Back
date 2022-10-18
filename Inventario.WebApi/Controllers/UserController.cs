@@ -28,16 +28,16 @@ namespace Inventario.WebApi.Controllers
             return Presenter.Content;
         }
 
-        //[HttpGet("{id}")]
-        //public async Task<IEnumerable<ListUserResponse>> GetUsers(int nIdUsuario)
-        //{
+        [HttpGet("{nIdUsuario}")]
+        public async Task<IEnumerable<ListUserByIdResponse>> GetUsers(int nOpcion, int nIdUsuario)
+        {
 
-        //    await ListUserByIdInputPort.GetUsers();
+            await ListUserInputPort.GetUserById(nOpcion, nIdUsuario);
 
-        //    var Presenter = ListUserByIdOutputPort as ListUserUserByIdPresenter;
+            var Presenter = ListUserOutputPort as ListUserPresenter;
 
-        //    return Presenter.Content;
-        //}
+            return Presenter.ContentById;
+        }
 
     }
 }

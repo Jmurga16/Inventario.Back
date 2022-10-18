@@ -10,6 +10,6 @@ namespace Inventario.UseCasesPorts.User.ListUser
     public interface IListUserOutputPort
     {
         Task Handle(IEnumerable<ListUserResponse> User);
-        //Task Handle(IEnumerable<ListUserByIdResponse> Menu);
+        Task Handle(IEnumerable<ListUserByIdResponse> User);
     }
 }

@@ -11,7 +11,7 @@ namespace Inventario.UseCasesPorts.User.ListUser
 
         //IEnumerable<Menu> GetMenus();
         Task GetUsers();
-        //Task GetUserById();
+        Task GetUserById(int nOpcion, int nIdUsuario);
 
     }
 }

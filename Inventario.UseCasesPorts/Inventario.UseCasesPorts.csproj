@@ -11,8 +11,4 @@
     <ProjectReference Include="..\Inventario.UseCasesDTOs\Inventario.UseCasesDTOs.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="User\FormUser\" />
-  </ItemGroup>
-
 </Project>

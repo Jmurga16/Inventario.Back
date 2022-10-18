@@ -10,11 +10,18 @@ namespace Presenters.User.ListUser
 {
     public class ListUserPresenter : IListUserOutputPort, IPresenter<IEnumerable<ListUserResponse>>
     {
-        public IEnumerable<ListUserResponse> Content { get; private set; } 
+        public IEnumerable<ListUserResponse> Content { get; private set; }
+        public IEnumerable<ListUserByIdResponse> ContentById { get; private set; }
 
         public Task Handle(IEnumerable<ListUserResponse> User)
         {
             Content = User;
+            return Task.CompletedTask;
+        }
+
+        public Task Handle(IEnumerable<ListUserByIdResponse> User)
+        {
+            ContentById = User;
             return Task.CompletedTask;
         }
     }
