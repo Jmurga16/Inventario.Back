@@ -8,10 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Inventario.ADONet\Inventario.ADONet.csproj" />
+    <ProjectReference Include="..\Inventario.Entities\Inventario.Entities.csproj" />
+    <ProjectReference Include="..\Inventario.UseCasesDTOs\Inventario.UseCasesDTOs.csproj" />
     <ProjectReference Include="..\Inventario.UseCasesPorts\Inventario.UseCasesPorts.csproj" />
   </ItemGroup>
 

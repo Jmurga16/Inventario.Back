@@ -25,6 +25,8 @@ namespace Inventario.WebApi.Controllers
             (listUserInputPort, listUserOutputPort, formUserInputPort, formUserOutputPort);
 
 
+        #region EndPoint: Obtener Todos los Usuarios
+
         [HttpGet]
         public async Task<IEnumerable<ListUserResponse>> GetUsers()
         {
@@ -35,7 +37,10 @@ namespace Inventario.WebApi.Controllers
 
             return Presenter.Content;
         }
+        #endregion
 
+
+        #region EndPoint: Obtener Un Usuario por Id
         [HttpGet("{nIdUsuario}")]
         public async Task<IEnumerable<ListUserByIdResponse>> GetUsers(int nOpcion, int nIdUsuario)
         {
@@ -46,7 +51,9 @@ namespace Inventario.WebApi.Controllers
 
             return Presenter.ContentById;
         }
+        #endregion
 
+        #region EndPoint: Insertar | Editar | Eliminar => Usuario
         [HttpPost]
         public async Task<GeneralResponse> PostUser(GeneralRequest request)
         {
@@ -57,7 +64,7 @@ namespace Inventario.WebApi.Controllers
 
             return Presenter.Content;
         }
-
+        #endregion
 
     }
 }
